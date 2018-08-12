@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // ROUTING
 // =====================================================
-// require("./routing/apiRoutes")(app);
+require("./app/routes/apiRoutes")(app);
 require("./app/routes/htmlRoutes")(app);
 
 // LISTENER
