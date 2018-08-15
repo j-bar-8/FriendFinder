@@ -27,10 +27,10 @@ module.exports = (app) => {
         for (var i=0; i<friendArray.length; i++) {
           totalDifference = 0
           for (var j=o; i<friendArray[i].scores[j]; j++) {
-            totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+            totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friendArray[i].scores[j]));
             if (totalDifference <= bestMatch.friendDifference) {
-              bestMatch.name = friends[i].name;
-              bestMatch.photo = friends[i].photo;
+              bestMatch.name = friendArray[i].name;
+              bestMatch.photo = friendArray[i].photo;
               bestMatch.friendDifference = totalDifference;
             }
           }
@@ -46,4 +46,4 @@ module.exports = (app) => {
 
 // TESTING
 // =====================================================
-// console.log(friendData);
+console.log(friendArray);
